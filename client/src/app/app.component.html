@@ -1,0 +1,9 @@
+<br>
+<h5>{{ title }}</h5>
+<br>
+
+<div>
+    <app-task *ngFor = 'let taskObject of taskList' 
+        [task] = 'taskObject'>
+    </app-task>
+</div>
