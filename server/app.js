@@ -55,17 +55,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/*
+///*
 app.use('/', index);
 app.use('/tasks', tasks);
 app.use('/api/tasks', apitasks);
-*/
-//Added below on April 28, 2018
 app.use('/static', express.static(path.join(__dirname, 'public')));
-app.use('/api/tasks', apitasks);
+//*/
+
+//Added below on April 28, 2018 for Angular
+/*
 app.use('/', express.static(path.join('../client/dist')));
-
-
+app.use('/api/tasks', apitasks);
+*/
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TaskService } from './task.service';
 
 @Component({
@@ -8,14 +8,16 @@ import { TaskService } from './task.service';
   providers: [ TaskService ]
 })
 export class AppComponent {
-  title = 'List of tasks:';
+  /*title = 'List of tasks:';
   constructor(private taskService:TaskService) {}
 
-  taskList = null;
+  //taskList = null;
+  tasks = null;
 
   ngOnInit() {
     this.taskService.listTasks().subscribe((tasks) => {
-      this.taskList = tasks;
+      //this.taskList = tasks;
+      this.tasks = tasks;
     });
-  }
+  }*/
 }

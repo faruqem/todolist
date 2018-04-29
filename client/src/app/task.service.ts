@@ -7,29 +7,25 @@ export class TaskService {
 
   constructor(private http:HttpClient) { }
   private apiUrl = environment.apiUrl;
-  taskList = [];
 
   listTasks() {
     return this.http.get(this.apiUrl + 'api/tasks');
   }
 
-  //For next project
-  /*
-    getTask(id) {
-      return this.http.get(this.apiUrl + 'api/tasks' + id);
-    }
+  getTask(id) {
+    return this.http.get(this.apiUrl + 'api/tasks/' + id);
+  }
 
-    createTask(taskObject) {
+  createTask(data) {
+    return this.http.post(this.apiUrl + 'api/tasks/', data);
+  }
 
-    }
+  updateTask(id, data) {
+    return this.http.put(this.apiUrl + 'api/tasks/' + id, data);
+  }
 
-    updateTask(id, data) {
-
-    }
-
-    deleteTask(id) {
-      return this.http.delete(this.apiUrl + 'api/tasks' + id);
-    }
-  */
+  deleteTask(id) {
+    return this.http.delete(this.apiUrl + 'api/tasks/' + id);
+  } 
 
 }
