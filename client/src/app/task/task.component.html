@@ -3,4 +3,5 @@
   <span class='text-primary'>Start Date:</span> {{ task.startDate | date: 'yyyy-MM-dd' }} | 
   <span class='text-primary'>End Date:</span> {{ task.endDate  | date: 'yyyy-MM-dd'}} |
   <span class='text-primary'>Assignee:</span> {{ task.assignee }}
+  <a routerLink="/task/{{ task._id }}">View</a>
 </p>

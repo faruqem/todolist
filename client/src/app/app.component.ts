@@ -8,16 +8,5 @@ import { TaskService } from './task.service';
   providers: [ TaskService ]
 })
 export class AppComponent {
-  /*title = 'List of tasks:';
-  constructor(private taskService:TaskService) {}
 
-  //taskList = null;
-  tasks = null;
-
-  ngOnInit() {
-    this.taskService.listTasks().subscribe((tasks) => {
-      //this.taskList = tasks;
-      this.tasks = tasks;
-    });
-  }*/
 }

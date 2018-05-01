@@ -15,6 +15,7 @@ export class TaskdetailComponent implements OnInit {
                 private router: Router) { }
 
   ngOnInit() {
+    this.getTask();
   }
 
   task:any;
@@ -36,7 +37,7 @@ export class TaskdetailComponent implements OnInit {
     this.task.startDate = obj.startDate;
     this.task.endDate = obj.endDate;
     this.task.assignee = obj.assignee;
-    this.task.updateTask(this.task._id, this.task) 
+    this.taskService.updateTask(this.task._id, this.task) 
       .subscribe((result) => {
         location.reload();
     });
