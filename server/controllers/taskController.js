@@ -55,7 +55,8 @@ taskController.create =  function (req,res,next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Task has been added successfully.");
-            res.redirect('/');
+            //res.redirect('/');
+            res.redirect('/admin');
         });
     } catch (err){
         console.log(err);
@@ -82,7 +83,8 @@ taskController.readById = function (req, res, next) {
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/admin');
     }
 };
 
@@ -112,12 +114,14 @@ taskController.update = function (req, res, next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Task has been updated successfully.");
-            res.redirect('/');
+            //res.redirect('/');
+            res.redirect('/admin');
         });
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/admin');
     }
 };
 
@@ -139,7 +143,8 @@ taskController.readByIdToDelete = function (req, res, next) {
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/admin');
     }
 };
 
@@ -157,12 +162,14 @@ taskController.delete = function (req, res, next) {
         })*/
         .then(function() {
             req.flash("oprSuccessfull","Task has been deleted successfully.");
-            res.redirect('/');
+            //res.redirect('/');
+            res.redirect('/admin');
         });
     } catch (err){
         console.log(err);
         flashMsgError: req.flash("oprError", "Oops! Something went wrong! Please, try again.");
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect('/admin');
     }
 };
 

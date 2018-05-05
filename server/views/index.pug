@@ -10,10 +10,13 @@ block content
       br
 
       //Put an instruction on how to create a new task.
-      h5 Use the 
+      //h5 Use the 
         a(href='/tasks/create').text-primary Create Task
         |  menu item to create a new task.
-      br
+      h5   
+        a(href='/').text-primary Create
+        |  a new task.
+      //br
 
       //Present the data in a bootstrap table.
       if flashMsgSuccess && flashMsgSuccess.length > 0

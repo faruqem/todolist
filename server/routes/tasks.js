@@ -5,7 +5,8 @@ var tasks = require('../controllers/taskController');
 //Retrieve list of current tasks
 //Redundant but added just in case user type the "/tasks" route, generally user
 //will see all tasks from the home page using route "/"
-router.get('/', tasks.readAll);
+//router.get('/', tasks.readAll);
+router.get('/', tasks.readAll); //for angular 
 
 //Display form to create a new task
 router.get('/create', tasks.displayForm);
