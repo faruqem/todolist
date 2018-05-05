@@ -27,11 +27,14 @@ taskController.readAll = function(req, res, next) {
 }
 
 //Display form to create a new task
+/*
 taskController.displayForm = function(req, res, next) {
     res.render('../views/tasks/create', { title: 'Add a new task' });
 };
+*/
 
 //Create a new task
+/*
 taskController.create =  function (req,res,next) {
     var newTask = {
       description: req.body.description,
@@ -50,9 +53,9 @@ taskController.create =  function (req,res,next) {
                         'content-type': 'application/json'
                     },
         })
-        /*.then(function(response) {
-            return response.json();
-        })*/
+        //.then(function(response) {
+            //return response.json();
+        //})
         .then(function() {
             req.flash("oprSuccessfull","Task has been added successfully.");
             //res.redirect('/');
@@ -64,6 +67,7 @@ taskController.create =  function (req,res,next) {
         res.redirect('/');
     }
 };
+*/
 
 //Retrieve a task from ID
 taskController.readById = function (req, res, next) {

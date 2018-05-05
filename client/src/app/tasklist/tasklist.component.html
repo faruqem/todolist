@@ -1,11 +1,14 @@
-<br>
-<h5>{{ title }}</h5>
-<br>
 
+
+<app-tasknew (taskNew)="reloadTaskList()"></app-tasknew>
+
+<br>
+<p></p>
+<h5>{{ title }}</h5>
+<h6>To edit a Task go to Details View</h6>
+<br>
 <div>
     <app-task *ngFor = 'let taskObject of taskList' 
         [task] = 'taskObject'>
     </app-task>
 </div>
-
-<app-tasknew (taskNew)="reloadTaskList()"></app-tasknew>

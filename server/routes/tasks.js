@@ -1,18 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var tasks = require('../controllers/taskController');
+var flash = require('express-flash');
+router.use(flash());
 
 //Retrieve list of current tasks
 //Redundant but added just in case user type the "/tasks" route, generally user
 //will see all tasks from the home page using route "/"
-//router.get('/', tasks.readAll);
-router.get('/', tasks.readAll); //for angular 
+router.get('/', tasks.readAll); 
 
 //Display form to create a new task
-router.get('/create', tasks.displayForm);
+//router.get('/create', tasks.displayForm);
 
 //Add the new task
-router.post("/create", tasks.create);
+//router.post("/create", tasks.create);
 
 //Get a task to update
 router.get("/update/:taskid", tasks.readById);
