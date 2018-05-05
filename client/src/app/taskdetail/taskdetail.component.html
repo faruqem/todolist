@@ -1,12 +1,13 @@
 <div *ngIf="task">
-  <h5> {{ task.description }} Details</h5>
+  <!--<h5> {{ task.description }} Details</h5>-->
   <div class="detailtask"></div>
   <div *ngIf="!editing">
     <div><span>Description: </span> {{ task.description }}</div>
-    <div><span>Start Date: </span>{{ task.startDate }}</div>
-    <div><span>End Date: </span>{{ task.endDate }}</div>
+    <div><span>Start Date: </span>{{ task.startDate | date: 'yyyy-MM-dd' }}</div>
+    <div><span>End Date: </span>{{ task.endDate | date: 'yyyy-MM-dd' }}</div>
     <div><span>Assignee: </span>{{ task.assignee }}</div>
     <button class="btn btn-link" (click)="setEditMode(true)">Edit</button>
+    <button type="button" (click)="deleteTask()">Delete this Task</button>
     <a class="btn btn-link" href="/#/">Back to Task List</a>
   </div>
 </div>
@@ -18,17 +19,17 @@
           <input #description name="description" class="form-control" [ngModel]="task.description">
           <br />
           <label for="startDate">Start Date:</label>
-          <input #startdate name="startDate" class="form-control" [ngModel]="task.startDate">
+          <input #startdate type="date" name="startDate" class="form-control" [ngModel]="task.startDate">
           <br />
           <label for="endDate">End Date:</label>
-          <input #enddate name="endDate" class="form-control" [ngModel]="task.endDate">
+          <input #enddate type="date" name="endDate" class="form-control" [ngModel]="task.endDate">
           <br />
           <label for="assignee">Assignee:</label>
           <input name="assignee" class="form-control" [ngModel]="task.assignee">
     </div>
     <button type="submit">Update Task</button>
     <button class="btn btn-link" (click)="setEditMode(false)">Cancel</button>
-    <button type="button" (click)="deleteTask()">Delete this Task</button>
+    <!--<button type="button" (click)="deleteTask()">Delete this Task</button>-->
   </form>
 </div>
 

@@ -39,7 +39,8 @@ export class TaskdetailComponent implements OnInit {
     this.task.assignee = obj.assignee;
     this.taskService.updateTask(this.task._id, this.task) 
       .subscribe((result) => {
-        location.reload();
+        //location.reload();
+        this.router.navigate(['/']);
     });
   }
 
