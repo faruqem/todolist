@@ -476,7 +476,7 @@ var TasknewComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-    apiUrl: 'http://165.227.45.199:8787/'
+    apiUrl: '/'
 };
 
 
