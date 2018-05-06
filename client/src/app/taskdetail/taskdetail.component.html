@@ -2,6 +2,7 @@
   <!--<h5> {{ task.description }} Details</h5>-->
   <div class="detailtask"></div>
   <div *ngIf="!editing">
+    <h5>Task Details</h5><br>
     <br>
     <div><span class='font-weight-bold'>Description: </span> {{ task.description }}</div>
     <br>
@@ -18,6 +19,7 @@
 </div>
 
 <div *ngIf="editing">
+  <h5> Edit Task</h5><br>
   <h6>Go to <a href="/admin">Admin</a> menu to update dates or delete a task.</h6>
   <br>
   <form #form="ngForm" (ngSubmit)="updateTask(form.value)">

@@ -8,7 +8,7 @@ import { TaskService } from '../task.service';
   providers: [ TaskService ]
 })
 export class TasklistComponent implements OnInit {
-  title = 'List of tasks:';
+  title = 'List of Tasks:';
   constructor(private taskService:TaskService) { }
 
   //@Input() task;
