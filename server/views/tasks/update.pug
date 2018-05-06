@@ -4,7 +4,7 @@ block content
     //Bootstrap row starts here inside the main container coming from the layout file.
     .row
       .col-md-8.col-md-offset-2
-        h2.mt-5 Update Task 
+        h5.mt-5 Update Task 
           small.text-muted (* required field)
         br
         
@@ -25,8 +25,8 @@ block content
             input#name.form-control(type='text' value=task.assignee name='assignee')
           .div.form-group
                     input#id.form-control(type="hidden" value=task._id name="_id")
-          button.btn.btn-primary(type='submit') Update Task 
+          button.btn.btn-danger(type='submit') Update Task 
           | &nbsp;
           |
           //a.btn.btn-primary(href='/' role='button') Cancel
-          a.btn.btn-primary(href='/admin' role='button') Cancel
+          a.btn.btn-danger(href='/admin' role='button') Cancel

@@ -11,9 +11,9 @@
     <br>
     <div><span class='font-weight-bold'>Assignee: </span>{{ task.assignee }}</div>
     <br>
-    <button class="btn btn-link" (click)="setEditMode(true)">Edit Task</button>
+    <button class="btn btn-info" (click)="setEditMode(true)">Edit Task</button>
     <!--<button type="button" (click)="deleteTask()">Delete this Task</button>-->
-    <a class="btn btn-link" href="/#/">Back to Task List</a>
+    <a class="btn btn-info" href="/#/">Back to Task List</a>
   </div>
 </div>
 
@@ -36,8 +36,8 @@
           <label for="assignee" class='font-weight-bold'>Assignee:</label>
           <input name="assignee" class="form-control" [ngModel]="task.assignee">
     </div>
-    <button class="btn btn-link" type="submit">Save</button>
-    <button class="btn btn-link" (click)="setEditMode(false)">Cancel</button>
+    <button class="btn btn-info" type="submit">Save</button>
+    <button class="btn btn-info" (click)="setEditMode(false)">Cancel</button>
     <!--<button type="button" (click)="deleteTask()">Delete this Task</button>-->
   </form>
 </div>
