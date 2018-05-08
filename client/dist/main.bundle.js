@@ -437,7 +437,13 @@ var TasknewComponent = /** @class */ (function () {
         //When a new task is created:
         this.taskNew = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
         //Initilize new task variable
-        this.task = {};
+        //task:any = {};
+        this.task = {
+            description: null,
+            startDate: null,
+            endDate: null,
+            assignee: null
+        };
     }
     TasknewComponent.prototype.ngOnInit = function () {
     };

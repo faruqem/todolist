@@ -27,24 +27,26 @@ This assignment is designed to let students demonstrate their knowledge of build
 6. Mongoose ODM (Object Data Modeling) library
 7. Bootstrap 4
 8. Initial site was generated using Express applcation generator
-9. Packages and dependencies are managed using node package manager
-10. HTML5, CSS3 and JavaScript
-11. Various other npm packages.
+9. Angular CLI was used to create initial Angular project
+10. Packages and dependencies are managed using node package manager
+11. HTML5, CSS3 and JavaScript
+12. TypeScript
+13. Various other npm packages
 
 ## How to Test (Production Server):
 1. Browse URL: http://165.227.45.199:8787/ 
 
-    <strong>Testing the Angular (End-User) Interface:</strong>
+    <strong>Testing the Angular (End-User/Client) Interface:</strong>
     1. Homepage  displays current task list showing task description & assignee, and option to create a new task.
-    2. Use the "Add a new task" option to create a new task. As soon as a new task is created it will be shown in the task list at the bottom. 
-    2. Each task list on the home page has a "View Details" link next to it. Clicking on the this link will take you to the task detail page where you can see all the fields.
-    3. Clicking on the "Edit Task" button on the details page will take you to the task update page where you can update task desciption and assignee. To update the start and end date, and also to delete a task, you need to go to the "Admin" interface.
+    2. Use the "Add a New Task" option to create a new task. As soon as a new task is created it will be shown in the task list at the bottom. 
+    2. Each task list on the home page has a "View Details" link next to it. Clicking on the this link will take you to the "Task Details" page where you can see all the fields.
+    3. Clicking on the "Edit Task" button on the details page will take you to the "Edit Task" page where you can update a task's desciption and assignee. To update the start and end date, and also to delete a task, you need to go to the "Admin" interface.
 
     <strong>Testing the Express (Admin) Interface:</strong>
-    1. Click on the "Admin" menu from the Angular interface will take you to the Admin interface made with Express. It will show all the task list on the Admin home page.
-    2. Use the "Update" and "Delete" link on the right side of each task to update or delete a task. Any change will be reflected in the task list displayed on the Admin home page.
+    1. Click on the "Admin" menu from the Angular interface. This will take you to the Admin interface made with Express. It will show all the task list on the Admin home page.
+    2. Use the "Update" and "Delete" link next to each task to update or delete a task. Any change will be reflected in the task list displayed on the Admin home page.
     3. If an operation (update or delete) is successful, a success message will be displayed.
-    4. All operations consumes REST APIs.
+    4. All operations consume REST APIs.
     5. While in the admin interface, click on the "Home" menu item to go back to Angular/End-User interface (site's main home page) or "Admin-Home" menu item to go back to the admin's home page.
     6. Use the "Test APIs" sub-menu from the top menu bar to test the REST APIs.
     7. Create a New Task: Fill up the task form (at least provide "Description") and then click "Create New" button. Use "Read All" button to check the new task.
@@ -54,18 +56,18 @@ This assignment is designed to let students demonstrate their knowledge of build
     11. Delete a Task: Copy and paste the ID of a task into the "Task ID" field and then click "Delete" button. Use "Read All" button to check the deletion.
 
 ## How to Install and Test Locally:
-1. Download and install Node.JS from https://nodejs.org/en/download/ if you don't already have Node.JS 
+1. Download and install Node.JS from https://nodejs.org/en/download/ if you don't already have Node.JS. 
 2. Also you need to have the necessary setup to install and run an Angular App locally on your machine. Please, check the documentation here: https://angular.io/docs.
 3. Download or clone this Assignment 7 repository from GitHub: git@github.com:HarvardDCENode/assignment7-final-faruqem.git
-4. Go to the main Angular client directory "assignment7-final-faruqem/client" (notice the "client" sub-folder name at the end) and run $ npm install to install any depedencies. Please, note that you need to go inside the "client" directory to run $ npm install, because this where my Client package.json file is.
-5. Please, note that for this project I already shared the "dist" folder so you don't need to build it. Just in case you would like to rebuild, go to the "client" directory & run $ ng build or $ ng build --env=prod based on which environment file (development or production respectively) you would like to use.  
-6. Go to the main project directory "assignment7-final-faruqem/server" (notice the "server" sub-folder name at the end) and run $ npm install (Please, note that you need to go inside the "server" directory to run $ npm install, because this where my Node/Express package.json file is, and also you need to run $ npm start from inside this directory because this is my main project folder.)
+4. Go to the main Angular client directory "assignment7-final-faruqem/client" (notice the "client" sub-folder name at the end) and run $ npm install to install any depedencies. Please, note that you need to go inside the "client" directory to run `$ npm install`, because this where my Client package.json file is.
+5. Please, note that for this project I already shared the "dist" folder so you don't need to build it. Just in case you would like to rebuild, go to the "client" directory & run `$ ng build` or `$ ng build --env=prod` based on which environment file (development or production respectively) you would like to use.  
+6. Go to the main project directory "assignment7-final-faruqem/server" (notice the "server" sub-folder name at the end) and run `$ npm install` (Please, note that you need to go inside the "server" directory to run $ npm install, because this where my Node/Express package.json file is, and also you need to run `$ npm start` from inside this directory because this is my main project folder.)
 7. Create a file named .env in the "server" folder and insert the following two lines with your MongoDB user name and password:
     ```
     DB_USER=<Your_DB_USER>
     DB_PWD=<Your_DB_PW> 
     ```
-8. Now run command $ npm start from the main project directory "server". 
+8. Now run command `$ npm start` from the main project directory "server". 
 9. Browse: http://localhost:8787/
 10. For all testing follow the instructions provided above in the "How to Test (Production Server)" section by replacing the url part to: http://localhost:8787/
 11. Press ctrl+c to stop the application.
@@ -85,17 +87,17 @@ This assignment is designed to let students demonstrate their knowledge of build
 * <strong>Comment: </strong> All my site functionalitles consume REST APIs - both the server side using a node-fetch package, and client side using Angular or client side JavaScript.
 
 4. You should serve your Angular application using a static route in Express. In other words, your server code will be delivering both your Angular code and your Express app.
-* <strong>Comment: </strong> Yes, I am serving my Angular application using a static route in Express. My server code is delivering both my Angular (end-user part) and Express (admin part) interface.
+* <strong>Comment: </strong> Yes, I am serving my Angular application using a static route in Express. My server code is delivering both my Angular (end-user part/client) and Express (admin part) interface.
 
 #### Angular
 1. Angular application structure as described in Assignment #6.
-* <strong>Comment: </strong> Yes my Angular application is based on Assignment #6 and following all its requirements.
+* <strong>Comment: </strong> Yes my Angular application is based on Assignment #6 and meeting all its requirements.
 
 2. A router with at least two views/pages.
 * <strong>Comment: </strong> Yes, I have a router with at least two view pages.
 
 3. At least two CRUD operations must be supported via Angular using your REST API. You may support all four operations in Angular, or do fewer in Angular and the others through the Express Web/HTML side. Duplication is fine (both Angular and Web/HTML methods), if that makes sense for your application.
-* <strong>Comment: </strong> My Angular (end-user) part does Create, Read and Update operations using my REST APIs, and my Express (admin) part does Update and Delete operations also consuming REST APIs using node-fetch module. My Angular part also gives the option to test all REST APIs using a client side JavaScript.
+* <strong>Comment: </strong> My Angular (end-user/client) part does Create, Read and Update operations using my REST APIs, and my Express (admin) part does Update and Delete operations also consuming REST APIs using node-fetch module. My Angular part also gives the option to test all REST APIs using a client side JavaScript.
 
 4. Your REST API access should be contained in a data service class.
 * <strong>Comment: </strong> Yes, my REST API access is contained in a data service class ("task.service.ts" file in the "client" folder).
@@ -103,7 +105,7 @@ This assignment is designed to let students demonstrate their knowledge of build
 
 ### Functionality
 1. Your application should provide the ability to do all four CRUD operations that lets user(s) manage information stored in the database. The information can be whatever is relevant to your site - information about people, pictures, sports teams, universities, blog posts, or whatever you've chosen as the purpose of your project. Your application should support being able to retrieve a resource(s), create a new resource, update existing ones, and delete them (all four CRUD operations).
-* <strong>Comment: </strong> Yes my application supports all four CRUD operations - Create, READ & Update in the Angular (Client/End-User) part, and Update & Delete in the Express (Server/Admin) part.
+* <strong>Comment: </strong> Yes my application supports all four CRUD operations - Create, Read & Update in the Angular (Client/End-User) part, and Update & Delete in the Express (Server/Admin) part.
 
 2. At least two types of CRUD operations must be supported in your Angular application.
 * <strong>Comment: </strong> Yes, at least two types of CRUD operations - Create, Read and Update is supported in my Angular part.
@@ -112,7 +114,7 @@ This assignment is designed to let students demonstrate their knowledge of build
 * <strong>Comment: </strong> I used Bootstrap 4 to create a simple user friendly interface.
 
 4. Your application should do something. This doesn't mean it has to be a completed, polished application ready in every detail to deploy to the public. It does mean that it should not simply be a collection of short, trivial, independent examples of each function.
-* <strong>Comment: </strong> My application gives the facility to maintain a project task list and all functionlities are related & provide a well structured flow of operations. All the foundation works are done. Based on this core I can create a much larger application with lot more functionalities.
+* <strong>Comment: </strong> My application gives the facility to maintain a project task list, and all functionlities are related & provide a well structured flow of operations. All the foundation works are done. Based on this core I can create a much larger application with lot more functionalities.
 
 
 ### Submission
