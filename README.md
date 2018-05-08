@@ -9,7 +9,7 @@ This assignment is designed to let students demonstrate their knowledge of build
 
 ## Solution Highlights
 1. The solution provides a way to manage a project task list.
-2. There are two parts of the site - one is Admin interface, made with Express, and the other is end-user interface, made with Angular. Admin inteface theme is Red on Black, and end user interface theme is Cyan on Black.
+2. There are two parts of the site - one is Admin interface, made with Express, and the other is end-user interface, made with Angular. Admin inteface theme is Red, Black & White, and end user interface theme is Cyan, Black & White.
 3. All four CRUD operations are supported and distributed between these two interfaces by handling at least two operations by the Angular (Create, Read, Update) as per the Assignment 7 requirements. Delete is handled in the Admin interface.
 4. End user (Angular) part can create a new task, list existing task & do partial update (only task description and assignee) of an existing task.
 5. Admin part can full update (all four fields inculding task start & end date) as well as delete an existing task. Admin part also has the option to test the REST APIs by calling client side JavaScript.
