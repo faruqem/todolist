@@ -166,6 +166,10 @@ var TaskService = /** @class */ (function () {
     TaskService.prototype.updateTask = function (id, data) {
         return this.http.put(this.apiUrl + 'api/tasks/' + id, data);
     };
+    /**
+     * Delete functionality has been moved to Express
+     * Kept here for code completeness and future use
+     */
     TaskService.prototype.deleteTask = function (id) {
         return this.http.delete(this.apiUrl + 'api/tasks/' + id);
     };
@@ -302,7 +306,11 @@ var TaskdetailComponent = /** @class */ (function () {
             _this.router.navigate(['/']);
         });
     };
-    //Deletes task using TaskService
+    /**
+     * This function deletes task using TaskService
+     * Anyway this delete responsibility has been moved to Express part,
+     * it is kept here for future usage only.
+     */
     TaskdetailComponent.prototype.deleteTask = function () {
         var _this = this;
         if (confirm("Are you sure you want to delete " + this.task.description + "?")) {
@@ -436,8 +444,9 @@ var TasknewComponent = /** @class */ (function () {
         this.taskService = taskService;
         //When a new task is created:
         this.taskNew = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
-        //Initilize new task variable
+        //Initilize a new task variable
         //task:any = {};
+        //Task class is defined in task.ts
         this.task = {
             description: null,
             startDate: null,

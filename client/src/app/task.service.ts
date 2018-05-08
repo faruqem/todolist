@@ -23,9 +23,13 @@ export class TaskService {
   updateTask(id, data) {
     return this.http.put(this.apiUrl + 'api/tasks/' + id, data);
   }
-
+  
+  /** 
+   * Delete functionality has been moved to Express
+   * Kept here for code completeness and future use
+   */
   deleteTask(id) {
     return this.http.delete(this.apiUrl + 'api/tasks/' + id);
   } 
-
+  
 }

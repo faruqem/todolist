@@ -19,6 +19,7 @@ export class TasknewComponent implements OnInit {
 
   //Initilize a new task variable
   //task:any = {};
+  //Task class is defined in task.ts
   task: Task = {
     description: null,
     startDate: null,

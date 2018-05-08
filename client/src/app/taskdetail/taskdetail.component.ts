@@ -44,7 +44,11 @@ export class TaskdetailComponent implements OnInit {
     });
   }
 
-  //Deletes task using TaskService
+  /**
+   * This function deletes task using TaskService
+   * Anyway this delete responsibility has been moved to Express part,
+   * it is kept here for future usage only.
+   */
   deleteTask(){
     if (confirm(`Are you sure you want to delete ${this.task.description}?`)){
       console.log(`deleting ${this.task._id}`);
