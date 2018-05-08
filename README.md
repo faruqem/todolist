@@ -72,7 +72,7 @@ This assignment is designed to let students demonstrate their knowledge of build
 10. For all testing follow the instructions provided above in the "How to Test (Production Server)" section by replacing the url part to: http://localhost:8787/
 11. Press ctrl+c to stop the application.
 
-## Assignment 7 Requirements and other Comments for the Grader
+## Assignment Requirements and other Comments for the Grader
 
 ### Structure
 
