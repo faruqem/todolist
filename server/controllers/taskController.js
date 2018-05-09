@@ -33,7 +33,7 @@ taskController.displayForm = function(req, res, next) {
 };
 */
 
-//Create a new task
+//Create a new task //Moved to Angular
 /*
 taskController.create =  function (req,res,next) {
     var newTask = {

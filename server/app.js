@@ -55,20 +55,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/*
-app.use('/', index);
-*/
+
+//app.use('/', index);
+
 app.use('/admin', index); //for angular
 app.use('/tasks', tasks);
 app.use('/api/tasks', apitasks);
-//app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
-//Added below on April 28, 2018 for Angular
-///*
 app.use('/', express.static(path.join('../client/dist')));
-app.use('/api/tasks', apitasks);
-//*/
+app.use('/tasklist', express.static(path.join('../client/dist')));
+app.use('/task/:id', express.static(path.join('../client/dist')));
+//app.use('/api/tasks', apitasks);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
