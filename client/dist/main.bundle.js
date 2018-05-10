@@ -50,7 +50,7 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.css")],
@@ -74,11 +74,13 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__task_task_component__ = __webpack_require__("./src/app/task/task.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__tasklist_tasklist_component__ = __webpack_require__("./src/app/tasklist/tasklist.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__tasknew_tasknew_component__ = __webpack_require__("./src/app/tasknew/tasknew.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__taskdetail_taskdetail_component__ = __webpack_require__("./src/app/taskdetail/taskdetail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__task_task_component__ = __webpack_require__("./src/app/task/task.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__tasklist_tasklist_component__ = __webpack_require__("./src/app/tasklist/tasklist.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tasknew_tasknew_component__ = __webpack_require__("./src/app/tasknew/tasknew.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__taskdetail_taskdetail_component__ = __webpack_require__("./src/app/taskdetail/taskdetail.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -95,31 +97,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', redirectTo: '/tasklist', pathMatch: 'full' },
-    { path: 'tasklist', component: __WEBPACK_IMPORTED_MODULE_7__tasklist_tasklist_component__["a" /* TasklistComponent */] },
-    { path: 'task/:id', component: __WEBPACK_IMPORTED_MODULE_9__taskdetail_taskdetail_component__["a" /* TaskdetailComponent */] }
+    { path: 'tasklist', component: __WEBPACK_IMPORTED_MODULE_8__tasklist_tasklist_component__["a" /* TasklistComponent */] },
+    { path: 'task/:id', component: __WEBPACK_IMPORTED_MODULE_10__taskdetail_taskdetail_component__["a" /* TaskdetailComponent */] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__task_task_component__["a" /* TaskComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__tasklist_tasklist_component__["a" /* TasklistComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__tasknew_tasknew_component__["a" /* TasknewComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__taskdetail_taskdetail_component__["a" /* TaskdetailComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__task_task_component__["a" /* TaskComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__tasklist_tasklist_component__["a" /* TasklistComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__tasknew_tasknew_component__["a" /* TasknewComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__taskdetail_taskdetail_component__["a" /* TaskdetailComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages__["FlashMessagesModule"].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */].forRoot(routes)
             ],
             providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -174,7 +178,7 @@ var TaskService = /** @class */ (function () {
         return this.http.delete(this.apiUrl + 'api/tasks/' + id);
     };
     TaskService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], TaskService);
     return TaskService;
@@ -221,11 +225,11 @@ var TaskComponent = /** @class */ (function () {
     TaskComponent.prototype.ngOnInit = function () {
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], TaskComponent.prototype, "task", void 0);
     TaskComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-task',
             template: __webpack_require__("./src/app/task/task.component.html"),
             styles: [__webpack_require__("./src/app/task/task.component.css")]
@@ -249,7 +253,7 @@ module.exports = ""
 /***/ "./src/app/taskdetail/taskdetail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"task\">\n  <!--<h5> {{ task.description }} Details</h5>-->\n  <div class=\"detailtask\"></div>\n  <div *ngIf=\"!editing\">\n    <h5>Task Details</h5><br>\n    <br>\n    <div><span class='font-weight-bold'>Description: </span> {{ task.description }}</div>\n    <br>\n    <div><span class='font-weight-bold'>Start Date: </span>{{ task.startDate | date: 'yyyy-MM-dd' }}</div>\n    <br>\n    <div><span class='font-weight-bold'>End Date: </span>{{ task.endDate | date: 'yyyy-MM-dd' }}</div>\n    <br>\n    <div><span class='font-weight-bold'>Assignee: </span>{{ task.assignee }}</div>\n    <br>\n    <button class=\"btn btn-info\" (click)=\"setEditMode(true)\">Edit Task</button>\n    <!--<button type=\"button\" (click)=\"deleteTask()\">Delete this Task</button>-->\n    <a class=\"btn btn-info\" href=\"/#/\">Back to Task List</a>\n  </div>\n</div>\n\n<div *ngIf=\"editing\">\n  <h5> Edit Task</h5><br>\n  <h6>Go to <a href=\"/admin\">Admin</a> menu to update dates or delete a task.</h6>\n  <br>\n  <form #form=\"ngForm\" (ngSubmit)=\"updateTask(form.value)\">\n    <div class=\"form-group\">\n          <label for=\"description\" class='font-weight-bold'>Description:</label>\n          <input #description name=\"description\" class=\"form-control\" [ngModel]=\"task.description\">\n          <br />\n          <!--\n          <label for=\"startDate\">Start Date:</label>\n          <input #startdate type=\"date\" name=\"startDate\" class=\"form-control\" [ngModel]=\"task.startDate\">\n          <br />\n          <label for=\"endDate\">End Date:</label>\n          <input #enddate type=\"date\" name=\"endDate\" class=\"form-control\" [ngModel]=\"task.endDate\">\n          <br />\n          -->\n          <label for=\"assignee\" class='font-weight-bold'>Assignee:</label>\n          <input name=\"assignee\" class=\"form-control\" [ngModel]=\"task.assignee\">\n    </div>\n    <button class=\"btn btn-info\" type=\"submit\">Save</button>\n    <button class=\"btn btn-info\" (click)=\"setEditMode(false)\">Cancel</button>\n    <!--<button type=\"button\" (click)=\"deleteTask()\">Delete this Task</button>-->\n  </form>\n</div>\n\n"
+module.exports = "<!--<div><flash-messages></flash-messages></div>-->\n<div *ngIf=\"task\">\n  <!--<h5> {{ task.description }} Details</h5>-->\n  <div *ngIf=\"!editing\">\n    <h5>Task Details</h5><br>\n    <br>\n    <div><span class='font-weight-bold'>Description: </span> {{ task.description }}</div>\n    <br>\n    <div><span class='font-weight-bold'>Start Date: </span>{{ task.startDate | date: 'yyyy-MM-dd' }}</div>\n    <br>\n    <div><span class='font-weight-bold'>End Date: </span>{{ task.endDate | date: 'yyyy-MM-dd' }}</div>\n    <br>\n    <div><span class='font-weight-bold'>Assignee: </span>{{ task.assignee }}</div>\n    <br>\n    <button class=\"btn btn-info\" (click)=\"setEditMode(true)\">Edit Task</button>\n    <!--<button type=\"button\" (click)=\"deleteTask()\">Delete this Task</button>-->\n    <a class=\"btn btn-info\" href=\"/#/\">Back to Task List</a>\n  </div>\n</div>\n\n<div *ngIf=\"editing\">\n  <h5> Edit Task</h5><br>\n  <h6>Go to <a href=\"/admin\">Admin</a> menu to update dates or delete a task.</h6>\n  <br>\n  <form #form=\"ngForm\" (ngSubmit)=\"updateTask(form.value)\">\n    <div class=\"form-group\">\n          <label for=\"description\" class='font-weight-bold'>Description:</label>\n          <input #description name=\"description\" class=\"form-control\" [ngModel]=\"task.description\">\n          <br />\n          <!--\n          <label for=\"startDate\">Start Date:</label>\n          <input #startdate type=\"date\" name=\"startDate\" class=\"form-control\" [ngModel]=\"task.startDate\">\n          <br />\n          <label for=\"endDate\">End Date:</label>\n          <input #enddate type=\"date\" name=\"endDate\" class=\"form-control\" [ngModel]=\"task.endDate\">\n          <br />\n          -->\n          <label for=\"assignee\" class='font-weight-bold'>Assignee:</label>\n          <input name=\"assignee\" class=\"form-control\" [ngModel]=\"task.assignee\">\n    </div>\n    <button class=\"btn btn-info\" type=\"submit\">Save</button>\n    <button class=\"btn btn-info\" (click)=\"setEditMode(false)\">Cancel</button>\n    <!--<button type=\"button\" (click)=\"deleteTask()\">Delete this Task</button>-->\n  </form>\n</div>\n\n"
 
 /***/ }),
 
@@ -261,6 +265,8 @@ module.exports = "<div *ngIf=\"task\">\n  <!--<h5> {{ task.description }} Detail
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__task_service__ = __webpack_require__("./src/app/task.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -273,11 +279,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TaskdetailComponent = /** @class */ (function () {
-    function TaskdetailComponent(route, taskService, router) {
+    function TaskdetailComponent(route, taskService, router, flashMessagesService) {
         this.route = route;
         this.taskService = taskService;
         this.router = router;
+        this.flashMessagesService = flashMessagesService;
         this.editing = false;
     }
     TaskdetailComponent.prototype.ngOnInit = function () {
@@ -295,35 +303,20 @@ var TaskdetailComponent = /** @class */ (function () {
         });
     };
     TaskdetailComponent.prototype.updateTask = function (obj) {
-        var _this = this;
         this.task.description = obj.description;
-        this.task.startDate = obj.startDate;
-        this.task.endDate = obj.endDate;
+        //this.task.startDate = obj.startDate; //Moved to Express Admin interface
+        //this.task.endDate = obj.endDate; //Moved to Express Admin interface
         this.task.assignee = obj.assignee;
         this.taskService.updateTask(this.task._id, this.task)
             .subscribe(function (result) {
-            //location.reload();
-            _this.router.navigate(['/']);
+            location.reload();
+            /*this.flashMessagesService.show('The task has been successfully updated!',
+                { cssClass: 'alert-success', timeout: 3000 }
+            );*/
         });
     };
-    /**
-     * This function deletes task using TaskService
-     * Anyway this delete responsibility has been moved to Express part,
-     * it is kept here for future usage only.
-     */
-    TaskdetailComponent.prototype.deleteTask = function () {
-        var _this = this;
-        if (confirm("Are you sure you want to delete " + this.task.description + "?")) {
-            console.log("deleting " + this.task._id);
-            this.taskService.deleteTask(this.task._id)
-                .subscribe(function (result) {
-                alert("Task " + _this.task.description + " has been deleted");
-                _this.router.navigate(['/']);
-            });
-        }
-    };
     TaskdetailComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-taskdetail',
             template: __webpack_require__("./src/app/taskdetail/taskdetail.component.html"),
             styles: [__webpack_require__("./src/app/taskdetail/taskdetail.component.css")],
@@ -331,7 +324,8 @@ var TaskdetailComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
             __WEBPACK_IMPORTED_MODULE_2__task_service__["a" /* TaskService */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]])
     ], TaskdetailComponent);
     return TaskdetailComponent;
 }());
@@ -350,7 +344,7 @@ module.exports = ""
 /***/ "./src/app/tasklist/tasklist.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<br>\n<h4 class=\"text-info\">Project Task List</h4>\n<br>\n<app-tasknew (taskNew)=\"reloadTaskList()\"></app-tasknew>\n\n<br>\n<p></p>\n<h5>{{ title }}</h5>\n<h6>To view/edit a task click on <strong>View Details</strong> next to specfic task.</h6>\n<br>\n<div>\n    <app-task *ngFor = 'let taskObject of taskList' \n        [task] = 'taskObject'>\n    </app-task>\n</div>\n<br>\n"
+module.exports = "\n<br>\n<h4 class=\"text-info\">Project Task List</h4>\n<br>\n<app-tasknew (taskNew)=\"reloadTaskList()\"></app-tasknew>\n\n<br>\n<p></p>\n<div><flash-messages></flash-messages></div>\n<h5>{{ title }}</h5>\n<h6>To view/edit a task click on <strong>View Details</strong> next to specfic task.</h6>\n<br>\n<div>\n    <app-task *ngFor = 'let taskObject of taskList' \n        [task] = 'taskObject'>\n    </app-task>\n</div>\n<br>\n"
 
 /***/ }),
 
@@ -392,7 +386,7 @@ var TasklistComponent = /** @class */ (function () {
         });
     };
     TasklistComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-tasklist',
             template: __webpack_require__("./src/app/tasklist/tasklist.component.html"),
             styles: [__webpack_require__("./src/app/tasklist/tasklist.component.css")],
@@ -428,6 +422,8 @@ module.exports = "<div>\n  <h5> Add a New Task:</h5>\n  <form #taskNewForm=\"ngF
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TasknewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__task_service__ = __webpack_require__("./src/app/task.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -439,11 +435,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var TasknewComponent = /** @class */ (function () {
-    function TasknewComponent(taskService) {
+    function TasknewComponent(taskService, flashMessagesService) {
         this.taskService = taskService;
+        this.flashMessagesService = flashMessagesService;
         //When a new task is created:
-        this.taskNew = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.taskNew = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         //Initilize a new task variable
         //task:any = {};
         //Task class is defined in task.ts
@@ -463,19 +461,22 @@ var TasknewComponent = /** @class */ (function () {
             .subscribe(function (task) {
             _this.taskNew.emit();
             taskNewForm.reset();
+            ;
+            _this.flashMessagesService.show('The new task has been successfully added!', { cssClass: 'alert-success', timeout: 3000 });
         });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
     ], TasknewComponent.prototype, "taskNew", void 0);
     TasknewComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-tasknew',
             template: __webpack_require__("./src/app/tasknew/tasknew.component.html"),
             styles: [__webpack_require__("./src/app/tasknew/tasknew.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__task_service__["a" /* TaskService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__task_service__["a" /* TaskService */],
+            __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]])
     ], TasknewComponent);
     return TasknewComponent;
 }());
@@ -511,7 +512,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
@@ -28,6 +29,7 @@ const routes:Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    FlashMessagesModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   providers: [],

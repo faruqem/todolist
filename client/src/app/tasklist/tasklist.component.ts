@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TaskService } from '../task.service';
 
+
 @Component({
   selector: 'app-tasklist',
   templateUrl: './tasklist.component.html',

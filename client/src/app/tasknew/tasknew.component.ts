@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { TaskService } from '../task.service';
 import { Task } from '../task';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-tasknew',
@@ -9,7 +10,8 @@ import { Task } from '../task';
 })
 export class TasknewComponent implements OnInit {
 
-  constructor(private taskService:TaskService) { }
+  constructor(private taskService:TaskService, 
+              private flashMessagesService:FlashMessagesService) { }
 
   ngOnInit() {
   }
@@ -32,7 +34,10 @@ export class TasknewComponent implements OnInit {
     this.taskService.createTask(this.task)
       .subscribe((task)=>{
         this.taskNew.emit();
-        taskNewForm.reset();
+        taskNewForm.reset();;
+        this.flashMessagesService.show('The new task has been successfully added!', 
+          { cssClass: 'alert-success', timeout: 3000 }
+        );
       });
     }
 }
