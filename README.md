@@ -5,7 +5,7 @@
 This is a transactional website to create and read a project task list. It's done by building a general express framework for CRUD operations on the data - creating, reading, updating or deleting them - using REST APIs, and then calling those REST APIs both from server side Express and client side Angular framework based web interface to support the website.
 
 ## Purpose
-This app is designed to demonstrate their knowledge of building a transactional website by combining Node, Express, REST APIs, Angular and MongoDB.
+This app is designed to demonstrate knowledge of building a transactional website by combining Node, Express, REST APIs, Angular and MongoDB.
 
 ## Solution Highlights
 1. The solution provides a way to manage a project task list.
